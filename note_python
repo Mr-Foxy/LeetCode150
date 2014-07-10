@@ -1,0 +1,7 @@
+Use of Stack:
+	stack = []
+	stack.append
+	stack.pop
+
+Round toward 0:
+	int(float(a) / b)
