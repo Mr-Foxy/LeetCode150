@@ -5,6 +5,7 @@ Progress:
 2 Evaluate Reverse Polish Notation Done
 3 Max Points on a Line Delayed
 4 Sort Linked List Done
-5 Insertion Sort List ing
+5 Insertion Sort List Done
+6 LRU Cache ing
  
-solved : 3/151
+solved : 4/151
