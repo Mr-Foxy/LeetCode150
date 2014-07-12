@@ -5,3 +5,15 @@ Use of Stack:
 
 Round toward 0:
 	int(float(a) / b)
+
+Note on Quick Sort
+	if p < r:
+		it prevents two situation:
+			p == r and p > r
+
+Pdb:
+	import pdb
+	pdb.set_trace
+	
+	These two sentences could set breakpoint on program
+
