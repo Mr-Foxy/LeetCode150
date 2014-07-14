@@ -7,5 +7,8 @@ Progress:
 4 Sort Linked List Done
 5 Insertion Sort List Done
 6 LRU Cache ing
+7 Binary Tree Postorder Traversal
+
+9 Reorder List
  
-solved : 4/151
+solved : 5/151

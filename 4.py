@@ -1,9 +1,13 @@
-import pdb
-# Definition for singly-linked list.
 class ListNode:
     def __init__(self, x):
         self.val = x
         self.next = None
+
+def print_list(head):
+	cur = head
+	while cur != None:
+		print cur.val
+		cur = cur.next
 
 def push(head, x):
 	new_node = ListNode(x)
@@ -14,13 +18,7 @@ def push(head, x):
 		while current.next != None:
 			current = current.next
 		current.next = new_node
-
-def print_list(head):
-	current = head
-	while current != None:
-		print current.val
-		current = current.next
-	
+		
 class Solution:
 	# @param head, a ListNode
 	# @return a ListNode
@@ -35,8 +33,6 @@ class Solution:
 		current = head
 		less_pivot = ListNode(-1)
 		less_pivot.next = head
-		first = True
-		pdb.set_trace()
 		while current != tail:
 			if current.val < pivot_val:
 				less_pivot = less_pivot.next
@@ -47,37 +43,36 @@ class Solution:
 		return less_pivot, less_pivot.next
 
 	def quicksort_recur(self, head, tail):
-		#pdb.set_trace()
-		'''
-		cur = tail
-		while cur != None:
-			if cur == head:
-				return
-			cur = cur.next
-		'''
 		if tail.next == head or tail == head:
 			return
 		prev, pivot = self.partition(head, tail)
+		# for test
+		'''
 		print "head is {}".format(head.val)
 		print "tail is {}".format(tail.val)
 		print "pivot is {}".format(pivot.val)
 		print_list(head)
+		'''
 		
 		self.quicksort_recur(head, prev)
 		if tail != pivot:
 			self.quicksort_recur(pivot.next, tail)
 		
 	def sortList(self, head):
+	    if head == None:
+	        return None
 		self.quicksort_recur(head, self.getTail(head))
 		return head
 		
 def main():
 	new_head = ListNode(3)
+	'''
 	push(new_head, 5)
 	push(new_head, 20)
 	push(new_head, 15)
 	push(new_head, 7)
 	push(new_head, 6)
+	'''
 	a = Solution()
 	a.sortList(new_head)
 	print "result is :"

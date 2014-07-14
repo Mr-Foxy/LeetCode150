@@ -9,8 +9,12 @@ class LRUCache:
 
     # @return an integer
 	def get(self, key):
-		times = self.time_map.get(key) += 1
-		return self.value_map.get(key, -1)
+		try:
+			value = self.value_map[key]
+			self.time_map[key] += 1
+			return value
+		except KeyError:
+			return -1
 
 	# @param key, an integer
 	# @param value, an integer

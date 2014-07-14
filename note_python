@@ -17,3 +17,5 @@ Pdb:
 	
 	These two sentences could set breakpoint on program
 
+Nested Func:
+	python could define function within a function 
