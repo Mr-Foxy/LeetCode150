@@ -19,3 +19,26 @@ Pdb:
 
 Nested Func:
 	python could define function within a function 
+
+When going through half List, use:
+	slow = head
+	fast = head
+	while fast != None and fast.next != None:
+		fast = fast.next.next
+		slow = slow.next
+
+	Then slow would be half-point of the list
+
+Reverse a sorted list
+	def reverse(self, head):
+		if head == None:
+			return None
+		current = head
+		nh = head
+		while current.next != None:
+			tmp = current.next
+			current.next = current.next.next
+			tmp.next = nh
+			nh = tmp
+		return nh
+		
