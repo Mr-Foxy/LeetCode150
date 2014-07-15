@@ -65,7 +65,7 @@ class Solution:
 		return head
 		
 def main():
-	new_head = ListNode(3)
+	new_head = ListNode(1)
 	'''
 	push(new_head, 5)
 	push(new_head, 20)

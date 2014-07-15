@@ -4,23 +4,21 @@ class Solution:
 	def evalRPN(self, tokens):
 		stack = []
 		for i in tokens:
-			try:
+			if i in ["+", "-", "*", "/"]:
+				right = stack.pop()
+				left = stack.pop()
+				if i == "+":
+					result = left + right 
+				if i == "-":
+					result = left - right 
+				if i == "*":
+					result = left * right 
+				if i == "/":
+					result = int(float(left) / right)
+				stack.append(result)
+			else:
 				value = int(i)
 				stack.append(value)
-				print stack
-			except:
-				if stack:
-					right = stack.pop()
-					left = stack.pop()
-					if i == "+":
-						result = left + right 
-					if i == "-":
-						result = left - right 
-					if i == "*":
-						result = left * right 
-					if i == "/":
-						result = int(float(left) / right)
-					stack.append(result)
 		return stack.pop()
 
 def main():
