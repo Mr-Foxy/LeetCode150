@@ -42,3 +42,5 @@ Reverse a sorted list
 			nh = tmp
 		return nh
 		
+Write if-else statement in one line:
+	then-statement if expression else else-statement
