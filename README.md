@@ -12,10 +12,11 @@ Progress:
 9 Reorder List Done 
 10 Linked List Cycle II Done
 11 Linked List Cycle Done
-12 Word Break II ongoing 
+12 Word Break II Done 
 13 Word Break Done
 14 Copy List with Random Pointer Done
-15 Single Number II ongoing
-16 Single Number ongoing
+15 Single Number II Done
+16 Single Number Done
+17 Candy
  
-solved : 12/151
+solved : 15/151

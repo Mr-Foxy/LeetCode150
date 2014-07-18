@@ -13,17 +13,12 @@ class Solution:
 				A[i] = [n]  # A[i] contains "n" means s[i..n-1] is a word
 			else:
 				A[i] = []
-			#if i == 3:
-				#print A
 			# Check al possible j break
 			for j in xrange(i+1, n):
 				if A[j] and s[i:j] in dict:
-					#print "A[j] is "
-					#print A[j]
 					A[i].append(j)
 			i -= 1
 		print A
-
 		# Step 2: find all possible sequences of breaks,
 		# which equals to find all paths from A[0] and stop when the break is "n".
 		# So it converts to BFS on a graph, with at most n steps.
@@ -48,7 +43,6 @@ class Solution:
 		return res
 
 a = Solution()
-dict = ["abc","a","ca","ab", "ad"]
-str = "abcaad"
+dict = ["abc","a","ca","ab" ]
+str = "abcaa"
 print a.wordBreak(str,dict)
-
