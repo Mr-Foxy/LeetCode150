@@ -1,63 +1,43 @@
 class Solution:
-    # @param ratings, a list of integer
-    # @return an integer
-    def candy(self, ratings):
-		basin = []
-		peak = []
-		candy = [0] * len(ratings)
-		length = len(ratings)
-		for i in range(length):
-			if i > 0 and i < length - 1:
-				if ratings[i] < ratings[i - 1] and ratings[i] < ratings[i+1]:
-					basin.append(i)
-			elif i == 0:
-				if ratings[i] < ratings[i + 1]:
-					basin.append(i)
-			elif i == length - 1:
-				if ratings[i] < ratings[i - 1]:
-					basin.append(i)
+	# @param ratings, a list of integer
+	# @return an integer
+	def candy(self, ratings):
+		total_candy = 1
+		prev_candy = 1
+		seq_len = 1
+		max_seq_cnt = 0
+		peak_cnt = 0
 
-			if i > 0 and i < length - 1:
-				if ratings[i] > ratings[i - 1] and ratings[i] > ratings[i+1]:
-					peak.append(i)
-			elif i == 0:
-				if ratings[i] > ratings[i + 1]:
-					peak.append(i)
-			elif i == length - 1:
-				if ratings[i] > ratings[i - 1]:
-					peak.append(i)
-		print basin
-		print peak
+		for i in range(1, len(ratings)):
+			if ratings[i] > ratings[i - 1]:
+				if max_seq_cnt != 0:
+					prev_candy = 1
+				max_seq_cnt = 0
+				total_candy += prev_candy + 1
+				prev_candy += 1
+				seq_len = 1
+				peak_cnt = 0
+			elif ratings[i] == ratings[i - 1]:
+				total_candy += 1
+				prev_candy = 1
+				seq_len = 1
+			else:
+				max_seq_cnt = prev_candy
+				if seq_len >= max_seq_cnt:
+					peak_cnt = 1
+				total_candy += seq_len + peak_cnt
+				seq_len += 1
 
-		j = 0
-		for i in range(len(basin)):
-			if basin[i] > peak[j]:
-				candy_num = 1
-				k = basin[i]
-				while k > peak[j] and k > 0:
-					print k
-					candy[k] = candy_num
-					candy_num += 1
-					k -= 1
+		return total_candy
 
-				if candy_num > candy[peak[j]]:
-					candy[peak[j]] = candy_num
-				
-				if j == len(peak) - 1:
-					break
-
-				candy_num = 1
-				k = basin[i]
-				while k < peak[j + 1] and k < length:
-					candy[k] = candy_num
-					candy_num += 1
-					k += 1
-
-				if candy_num > candy[peak[j + 1]]:
-					candy[peak[j + 1]] = candy_num
-
-		return candy
-
-list = [7,4,6,8,7,4,2,9,10,15,5]
+list = [5,4] #3
+list2 = [4,5,7,6,4,3,2,4,5,6,3,2] #30
+list3 = [1,2,2,1] #6 
+list4 = [5,3,1] #6
+list5 = [5,6,5] #4
 a = Solution()
 print a.candy(list)
+print a.candy(list2)
+print a.candy(list3)
+print a.candy(list4)
+print a.candy(list5)
