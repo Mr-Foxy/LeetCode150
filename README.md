@@ -20,7 +20,12 @@ Progress:
 17 Candy Done
 18 Gas Station Done
 19 Clone Graph Done
-20 Palindrome Partitioning II 
-21 Palindrome Partitioning ongoing
+20 Palindrome Partitioning II Done
+21 Palindrome Partitioning Done
+22 Surrounded Region Done
+23 Sum Root to Leaf Numbers Done
+24 Longest Consecutive Sequence Done
+25 Word Ladder II
+26 Word Ladder Ongoing
  
-solved : 18/151
+solved : 23/151
