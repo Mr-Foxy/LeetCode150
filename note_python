@@ -44,3 +44,6 @@ Reverse a sorted list
 		
 Write if-else statement in one line:
 	then-statement if expression else else-statement
+
+Use for index, element in enumerate(list):
+	

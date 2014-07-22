@@ -18,7 +18,9 @@ Progress:
 15 Single Number II Done
 16 Single Number Done
 17 Candy Done
-18 Gas Station Ongoing
-
+18 Gas Station Done
+19 Clone Graph Done
+20 Palindrome Partitioning II 
+21 Palindrome Partitioning ongoing
  
-solved : 16/151
+solved : 18/151

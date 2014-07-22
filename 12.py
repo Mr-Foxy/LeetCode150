@@ -30,6 +30,7 @@ class Solution:
 			for path in path_list:
 				if path[-1] == n:
 					tmp = [s[path[i]:path[i+1]] for i in range(0, len(path) - 1)]
+					#res.append(tmp)
 					res.append(" ".join(tmp))
 				else:
 					for i in table[path[-1]]:
@@ -71,8 +72,8 @@ class Solution:
 		'''
 
 def main():
-	dict = []
-	str = "a"
+	dict = ["a", "b"]
+	str = "ab"
 	a = Solution()
 	print a.wordBreak(str,dict)
 if __name__ == '__main__':
