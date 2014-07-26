@@ -29,8 +29,13 @@ Progress:
 26 Word Ladder TLE
 27 Valid Palindrome Done
 28 Binary Tree Maximum Path Sum TLE
-29 Best Time to Buy and Sell Stock III Ongoing
-30 Best Time to Buy and Sell Stock II Ongoing
+29 Best Time to Buy and Sell Stock III Done
+30 Best Time to Buy and Sell Stock II Done
 31 Best Time to Buy and Sell Stock Done
+32 Triangle Done
+33 Pascal's Triangle II Done
+34 Pascal's Triangle Done
+35 Populating Next Right Pointers in Each Node II Ongoing 
+36 Populating Next Right Pointers in Each Node Ongoing 
 
-solved : 28/151
+solved : 33/151
