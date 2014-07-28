@@ -36,6 +36,6 @@ Progress:
 33 Pascal's Triangle II Done
 34 Pascal's Triangle Done
 35 Populating Next Right Pointers in Each Node II Ongoing 
-36 Populating Next Right Pointers in Each Node Ongoing 
+36 Populating Next Right Pointers in Each Node Done 
 
-solved : 33/151
+solved : 34/151
