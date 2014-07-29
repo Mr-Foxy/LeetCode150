@@ -42,6 +42,8 @@ Progress:
 39 Path Sum II Done
 40 Path Sum Done
 41 Minimum Depth of Binary Tree Done
-42 Balanced Binary Tree 
+42 Balanced Binary Tree Done
+43 Convert Sorted List to Binary Search Tree
+
 
 solved : 40/151
