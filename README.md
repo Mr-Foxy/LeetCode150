@@ -35,8 +35,13 @@ Progress:
 32 Triangle Done
 33 Pascal's Triangle II Done
 34 Pascal's Triangle Done
-35 Populating Next Right Pointers in Each Node II Ongoing 
+35 Populating Next Right Pointers in Each Node II Done 
 36 Populating Next Right Pointers in Each Node Done 
-37 Distinct Subsequences Ongoing
+37 Distinct Subsequences Done
+38 Flatten Binary Tree to Linked List Done
+39 Path Sum II Done
+40 Path Sum Done
+41 Minimum Depth of Binary Tree Done
+42 Balanced Binary Tree 
 
-solved : 35/151
+solved : 40/151
