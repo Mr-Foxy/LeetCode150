@@ -14,50 +14,23 @@ class Solution:
 				val = int(num1[l1 - 1 - i]) * int(num2[l2 - 1 - j]) + carry + res[i+j]
 				carry = val / 10
 				val = val % 10
-
+				res[i+j] = val
 			if carry > 0:
-				res[
+				res[l2 + i] += carry
+		
+		i = l1 + l2 - 1
+		while res[i] == 0 and i >= 0:
+			i -= 1
+		
+		if i == -1:
+			return "0"
+
+		resStr = ""
+		while i >= 0:
+			resStr = resStr + str(res[i])
+			i -= 1
 				
-		return res
+		return resStr
 	
-#	def add(self, num1, num2):
-#		if len(num1) < len(num2):
-#			return self.add(num2, num1)
-#
-#		l1 = len(num1)
-#		l2 = len(num2)
-#		res = ""
-#		
-#		p1 = l1 - 1
-#		p2 = l2 - 1
-#
-#		forward = 0
-#		while p2 >= 0:
-#			val = int(num1[p1]) + int(num2[p2]) + forward
-#			forward = 0
-#
-#			if val >= 10:
-#				forward = 1
-#				val = val % 10
-#
-#			res = str(val) + res
-#
-#			p1 -= 1
-#			p2 -= 1
-#		
-#		while p1 >= 0:
-#			val = int(num1[p1]) + forward
-#			forward = 0
-#		
-#			if val >= 10:
-#				forward = 1
-#				val = val % 10
-#		
-#			res = str(val) + res
-#			p1 -= 1
-#
-#		return res
-			
 A = Solution()
 print A.multiply("99", "99")
-#print A.add("81", "810")
