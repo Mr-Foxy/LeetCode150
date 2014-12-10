@@ -13,7 +13,6 @@ class Solution:
 				new.append(-1)
 			p_table.append(new)
 		
-
 		for i in range(l):
 			p_table[i][i] = 1
 
@@ -23,7 +22,6 @@ class Solution:
 				A[i] = [l]
 			else:
 				A[i] = []
-
 
 			for j in range(i+1, l):
 				if A[j] and self.palindrome_dp(s, p_table, i, j-1):
@@ -66,17 +64,6 @@ class Solution:
 			return False
 
 # no Use now
-'''
-	def palindrome(self, s):
-		length = len(s)
-		mid = length / 2
-		result = True
-		for f in range(0, mid):
-			b = -f - 1
-			if s[f] != s[b]:
-				return False
-		return True
-'''
 
 a = Solution()
 print a.minCut("abacc")
